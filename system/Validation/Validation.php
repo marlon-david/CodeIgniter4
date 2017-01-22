@@ -185,7 +185,7 @@ class Validation implements ValidationInterface
 			if ($passed === false)
 			{
 				$this->errors[$field] = is_null($error)
-                    ? $this->getErrorMessage($rule, $field, $param)
+                    ? $this->getErrorMessage($rule, $field)
                     : $error;
 
 				return false;
