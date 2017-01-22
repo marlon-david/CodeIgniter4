@@ -765,7 +765,7 @@ class CodeIgniter
         $buffer = ob_get_contents();
         ob_end_clean();
 
-        echo $buffer;
+        $this->response->setBody($buffer)->send();
         $this->callExit(EXIT_UNKNOWN_FILE);    // Unknown file
     }
 
