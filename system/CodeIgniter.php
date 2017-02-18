@@ -807,6 +807,7 @@ class CodeIgniter
         ob_end_clean();
 
         echo $buffer;
+        $this->sendResponse();
         $this->callExit(EXIT_UNKNOWN_FILE);    // Unknown file
     }
 
